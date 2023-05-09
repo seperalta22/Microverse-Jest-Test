@@ -60,3 +60,12 @@ describe('Calculator', () => {
 		expect(calculator.divide(5).divide(5).result).toBe(0);
 	});
 });
+
+// Capitalize
+
+describe('capitalize', () => {
+	test('capitalizes the first letter of a string', () => {
+		expect(capitalize('hello')).toBe('Hello');
+		expect(capitalize('sdfa')).toBe('Sdfa');
+	});
+});
