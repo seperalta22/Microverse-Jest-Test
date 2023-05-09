@@ -1,4 +1,4 @@
-const { stringLength, reverseString } = require('../index');
+const { stringLength, reverseString, Calculator } = require('../index');
 
 describe('stringLength', () => {
 	test('returns the length of a string', () => {
@@ -29,5 +29,34 @@ describe('reverseString', () => {
 	test('returns a reversed string', () => {
 		expect(reverseString('hello')).toBe('olleh');
 		expect(reverseString('sdf')).toBe('fds');
+	});
+});
+
+// Calculator
+
+describe('Calculator', () => {
+	let calculator;
+	beforeEach(() => {
+		calculator = new Calculator();
+	});
+
+	test('adds numbers', () => {
+		expect(calculator.add(5).result).toBe(5);
+		expect(calculator.add(5).add(5).result).toBe(15);
+	});
+
+	test('subtracts numbers', () => {
+		expect(calculator.subtract(5).result).toBe(-5);
+		expect(calculator.subtract(5).subtract(5).result).toBe(-15);
+	});
+
+	test('multiplies numbers', () => {
+		expect(calculator.multiply(5).result).toBe(0);
+		expect(calculator.multiply(5).multiply(5).result).toBe(0);
+	});
+
+	test('divides numbers', () => {
+		expect(calculator.divide(5).result).toBe(0);
+		expect(calculator.divide(5).divide(5).result).toBe(0);
 	});
 });
