@@ -1,4 +1,9 @@
-const { stringLength, reverseString, Calculator } = require('../index');
+const {
+	stringLength,
+	reverseString,
+	Calculator,
+	capitalize,
+} = require('../index');
 
 describe('stringLength', () => {
 	test('returns the length of a string', () => {
